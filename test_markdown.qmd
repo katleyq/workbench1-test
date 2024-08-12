@@ -1,0 +1,33 @@
+---
+title: "test_markdown"
+format: html
+editor: visual
+---
+
+The following script should take 50 seconds to run:
+
+```{r}
+# record start time
+start_time = Sys.time()
+```
+
+```{r}
+# create a loop that iterates 5 times and sets system to sleep for 10 seconds
+for (i in 1:5) {
+  cat("Iteration", i, "\n")
+  Sys.sleep(10)
+}
+```
+
+```{r}
+# record end time
+end_time = Sys.time()
+
+# print total execution time
+total_time = as.numeric(difftime(end_time, start_time, units = "secs"))
+```
+
+```{r}
+# write results to txt file
+write(paste("Total execution time: ", total_time, "seconds"), file = "execution_time.txt")
+```
