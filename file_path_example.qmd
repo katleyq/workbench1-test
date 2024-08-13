@@ -1,0 +1,14 @@
+---
+title: "file_path"
+format: html
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+library(here)
+```
+
+```{r}
+data = read_csv("/courses/EDS221/example/data.csv")
+```
