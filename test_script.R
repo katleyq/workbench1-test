@@ -15,5 +15,5 @@ end_time = Sys.time()
 # print total execution time
 total_time = as.numeric(difftime(end_time, start_time, units = "secs"))
 
-# write results to txt file
+# write results to text file
 write(paste("Total execution time: ", total_time, "seconds"), file = "execution_time.txt")
